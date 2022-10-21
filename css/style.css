@@ -13,7 +13,14 @@ CSS FONTS CODE:
 font-family: 'Playfair Display', serif;
 font-family: 'Lora', serif;
 */
-
+:root{
+    --title-font: 'Playfair Display', serif;
+    --text-font: 'Lora', serif;
+    --font-gray-color: #575757;
+    --font-black-color: #333333;
+    --label-color: #529F0F;
+    --hover-color: #529F0F; 
+}
 /*Centering the content inside the body*/
 body{
     display: flex;
@@ -39,11 +46,17 @@ body{
 }
 ul.nav-list-buttons{
     display: inline-block;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 ul.nav-list-buttons li{
     display: inline-block;
     margin-left: 10px;
-    padding: 5px 10px;
+    padding: 10px 20px;
+}
+ul.nav-list-buttons > li{
+    padding-left: 0px;
+    margin-left: 0px;
 }
 .nav-button:hover{
     background-color: #529F0F;
@@ -52,6 +65,11 @@ ul.nav-list-buttons li{
 ul.nav-list-buttons li a{
     text-decoration: none;
     padding: 5px 10px;
+}
+/*Rotate the arrow icon*/
+div.header-buy-section i.fa-chevron-up{
+    transform: rotate(180deg);
+    margin-right: 20px;
 }
 
 /*=========FONT Y TEXT COLOR FOR THE NAV BUTTONS==========*/
@@ -86,10 +104,36 @@ p.header-img-text-2{
     text-decoration: underline;
 }
 
-
-
-
-
+/*==========OFFER CARDS SECTION==========*/
+div.offers-container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 1%;
+}
+div.offers-container:hover{
+    cursor: pointer;
+}
+div.offer-item{
+    position: relative;
+}
+div.offer-item div.offer-item-text{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+div.offer-item-text label{
+    font-size: 3rem;
+    color: var(--label-color);
+    font-family: var(--title-font);
+}
+div.offer-item-text p{
+    font-size: 1rem;
+    color: var(--font-black-color);
+    font-family: var(--text-font);
+    font-weight: bold;
+    margin-top: 0px;
+}
 
 
 
@@ -100,14 +144,21 @@ p.header-img-text-2{
 
 /*==========RESPONSIVE==========*/
 @media (max-width: 640px) {
+    /*Hiding the nav buttons*/
     ul.nav-list-buttons{
         display: none;
     }
+    /*Size and position of the header big text*/
     p.header-img-text{
         top: 15%;
         font-size: 1rem;
     }
     p.header-img-text-2{
         font-size: 1rem;
+    }
+
+    /*==========OFFER SECTION FOR MOBILE==========*/
+    .offers-container{
+        display: block;
     }
 }
