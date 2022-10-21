@@ -59,7 +59,7 @@ ul.nav-list-buttons > li{
     margin-left: 0px;
 }
 .nav-button:hover{
-    background-color: #529F0F;
+    background-color: var(--hover-color);
     cursor: pointer;
 }
 ul.nav-list-buttons li a{
@@ -74,8 +74,8 @@ div.header-buy-section i.fa-chevron-up{
 
 /*=========FONT Y TEXT COLOR FOR THE NAV BUTTONS==========*/
 li.nav-button a span{
-    color: #333333;
-    font-family: 'Playfair Display', bold;
+    color: var(--font-black-color);
+    font-family: var(--title-font);
 }
 div.header-img{
     position: relative
@@ -91,31 +91,35 @@ p.header-img-text{
     left: 30%;
     text-align: center;
     font-size: 4rem;
-    font-family: 'Playfair Display', serif;
-    color: #333333;
+    font-family: var(--title-font);
+    color: var(--font-black-color);
 }
 p.header-img-text-2{
     position: absolute;
     top: 55%;
     left: 40%;
-    font-family: 'Playfair Display', serif;
-    color: #333333;
+    font-family: var(--title-font);
+    color: var(--font-black-color);
     font-size: 3rem;
     text-decoration: underline;
 }
 
 /*==========OFFER CARDS SECTION==========*/
 div.offers-container{
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 1%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 div.offers-container:hover{
     cursor: pointer;
 }
 div.offer-item{
     position: relative;
+    width: 100%;
+}
+div.offer-item img{
+    width: 100%;
 }
 div.offer-item div.offer-item-text{
     position: absolute;
@@ -134,6 +138,38 @@ div.offer-item-text p{
     font-weight: bold;
     margin-top: 0px;
 }
+
+/*==========LATEST PRODUCTOS SECTION==========*/
+
+/*Setting styles for the latest products container*/
+div.latest-products-section{
+    width: 90%;
+    margin-top: 15%;
+}
+div.latest-product-container{
+    display: flex;
+}
+h2.latest-products-title{
+    font-size: 2.5rem;
+    font-family: var(--title-font);
+    color: var(--font-black-color);
+    text-align: center;
+}
+p.latest-products-text{
+    font-family: var(--text-font);
+    color: var(--font-black-color);
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*Setting styles for the items "Latest products"*/
+
+
+
+
+
+
+
 
 
 
@@ -158,7 +194,27 @@ div.offer-item-text p{
     }
 
     /*==========OFFER SECTION FOR MOBILE==========*/
-    .offers-container{
+    div.offers-container{
+        flex-direction: column;
+    }
+    div.offer-item{
+        height: 100%;
         display: block;
+    }
+    div.offer-item-text label{
+        font-size: 1.2rem;
+    }
+    div.offer-item-text p{
+        font-size: 0.5rem;
+    }
+    /*==========LATEST PRODUCTOS SECTION==========*/
+    div.latest-product-item{
+        display: none;
+    }
+    div.latest-product-item-mobile{
+        width: 100%;
+    }
+    div.latest-product-item-mobile img{
+        width: 100%;
     }
 }
