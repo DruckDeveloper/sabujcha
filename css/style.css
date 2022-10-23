@@ -27,7 +27,11 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
+#main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*==========HEADER DESKTOP SECTION==========*/
 #web-header{
     width: 90%;
@@ -110,6 +114,7 @@ div.offers-container{
     display: flex;
     justify-content: center;
     margin: auto;
+    margin-top: 10%;
 }
 div.offers-container:hover{
     cursor: pointer;
@@ -141,13 +146,16 @@ div.offer-item-text p{
 
 /*==========LATEST PRODUCTOS SECTION==========*/
 
-/*Setting styles for the latest products container*/
+/*Setting styles for the new products container*/
 div.latest-products-section{
     width: 90%;
-    margin-top: 15%;
+    margin: 0 15%;
 }
 div.latest-product-container{
     display: flex;
+    margin-top: 10%;
+    justify-content: space-evenly;
+    width: 100%;
 }
 h2.latest-products-title{
     font-size: 2.5rem;
@@ -162,19 +170,116 @@ p.latest-products-text{
     text-align: center;
 }
 
-/*Setting styles for the items "Latest products"*/
+/*Setting styles for the items "latest products"*/
+div.latest-product-item:hover{
+    cursor: pointer;
+    border: 2px solid var(--hover-color);
+}
+div.latest-product-container img{
+    width: 100%;
+}
+div.latest-product-item p.latest-product-title{
+    color: var(--font-gray-color);
+    font-family: var(--text-font);
+    font-size: 1.3rem;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+}
+div.latest-product-item p.latest-product-text{
+    color: var(--font-black-color);
+    font-family: var(--text-font);
+    font-weight: bold;
+    margin-top: 0px;
+}
+p.latest-product-text span{
+    text-decoration: line-through;
+}
+
+/*==========TESTI SECTION==========*/
+div.testi-section{
+    margin: 15% auto;
+    width: 100%;
+    text-align: center;
+}
+div.testi-section div{
+    margin: auto;
+}
+/*Text in the testi section*/
+div.testi-section p.testi-title{
+    font-size: 1rem;
+    font-family: var(--title-font);
+    color: var(--font-black-color);
+    margin-bottom: 5%;
+}
+div.testi-section p.testi-1-text{
+    font-size: 0.8rem;
+    font-family: var(--text-font);
+    color: var(--font-black-color);
+    margin-bottom: 0;
+}
+div.testi-section p.testi-2-text{
+    font-size: 0.7rem;
+    font-family: var(--text-font);
+    color: var(--font-gray-color);
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/*==========NEW PRODUCTS SECTION==========*/
+div.new-products-section{
+    width: 90%;
+    margin: 0 15%;
+}
+div.new-product-container{
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-evenly;
+    width: 100%;
+}
+h2.new-products-title{
+    font-size: 2.5rem;
+    font-family: var(--title-font);
+    color: var(--font-black-color);
+    text-align: center;
+}
+p.new-products-text{
+    font-family: var(--text-font);
+    color: var(--font-black-color);
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*Setting styles for the items "new products"*/
+div.new-product-item:hover{
+    cursor: pointer;
+    border: 2px solid var(--hover-color);
+}
+div.new-product-container img{
+    width: 100%;
+}
+div.new-product-item p.new-product-title{
+    color: var(--font-gray-color);
+    font-family: var(--text-font);
+    font-size: 1.3rem;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10px;
+}
+div.new-product-item p.new-product-text{
+    color: var(--font-black-color);
+    font-family: var(--text-font);
+    font-weight: bold;
+    margin-top: 0px;
+}
+p.new-product-text span{
+    text-decoration: line-through;
+}
 
 
 
 
-
-
-
-
-
-
-
-
+/*NEW COMMENT*/
 
 
 
@@ -202,19 +307,36 @@ p.latest-products-text{
         display: block;
     }
     div.offer-item-text label{
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
     div.offer-item-text p{
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
-    /*==========LATEST PRODUCTOS SECTION==========*/
-    div.latest-product-item{
+    /*==========LATEST PRODUCTS SECTION==========*/
+    div.latest-products-section{
+        margin: auto;
+    }
+    div.latest-product-item-hiden{
         display: none;
     }
     div.latest-product-item-mobile{
         width: 100%;
     }
     div.latest-product-item-mobile img{
+        width: 100%;
+    }
+
+    /*==========NEW PRODUCTS SECTION==========*/
+    div.new-products-section{
+        margin: auto;
+    }
+    div.new-product-item-hiden{
+        display: none;
+    }
+    div.new-product-item-mobile{
+        width: 100%;
+    }
+    div.new-product-item-mobile img{
         width: 100%;
     }
 }
