@@ -136,6 +136,9 @@ div.offer-item-text p{
 /*Setting styles for the new products container*/
 div.latest-products-section{
     width: 90%;
+    background-image: url(/img/bg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 div.latest-product-container{
     display: flex;
@@ -270,6 +273,9 @@ div.subscribe-section{
     flex-direction: column;
     align-items: center;
     margin: 15% 0;
+    background-image: url(/img/bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 div.subscribe-section h2{
     font-family: var(--title-font);
@@ -358,6 +364,34 @@ div.partners-container{
     justify-content: space-between;
 }
 
+/*==========FOOTER SECTION==========*/
+#web-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#web-footer ul{
+    list-style: none;
+}
+#web-footer ul li.footer-column-title{
+    font-family: var(--title-font);
+    font-size: 2rem;
+    color: var(--font-black-color);
+    margin: 10% 0;
+}
+#web-footer ul li.footer-column-item{
+    font-family: var(--text-font);
+    font-size: 1.3rem;
+    color: var(--font-gray-color);
+    margin: 5% 0;
+}
+/*hover for the footer items*/
+#web-footer ul li.footer-column-item:hover{
+    cursor: pointer;
+    color: var(--hover-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
 
 
 /*==========RESPONSIVE QUERY FOR SMARTPHONES==========*/
@@ -443,4 +477,14 @@ div.partners-container{
         display: none;
     }
 
+    /*==========FOOTER SECTION==========*/
+    #web-footer{
+        flex-direction: column;
+    }
+    #web-footer ul li.footer-column-title{
+        margin: 5% 0;
+    }
+    #web-footer ul li.footer-column-item{
+        margin: 2.5% 0;
+    }
 }
